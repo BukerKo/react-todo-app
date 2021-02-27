@@ -116,6 +116,14 @@ footer .buttons {
     background: url(../images/search.svg) no-repeat center;
 }
 
+.delete {
+    float: right;
+    height: 24px;
+    width: 24px;
+    background: url(../images/x3.svg) no-repeat center;
+    border-width: 0;
+}
+
 .alert.alert-info {
     margin: 10px 0;
     padding: 10px;

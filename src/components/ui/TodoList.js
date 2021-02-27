@@ -7,7 +7,7 @@ import {applyFilter, search} from '../../services/filter';
 
 export default function TodoList(props) {
     const {list, filter, mode, query} = props.data;
-    const {addNew, changeFilter, changeStatus, changeMode, setSearchQuery} = props.actions;
+    const {addNew, changeFilter, changeStatus, changeMode, setSearchQuery, deleteItem} = props.actions;
     const count = list.length;
     const items = search(applyFilter(list, filter), query);
 
@@ -16,7 +16,7 @@ export default function TodoList(props) {
             <div className="row">
                 <div className="todolist">
                     <Header {...{addNew, mode, query, setSearchQuery}}/>
-                    <FilteredList {...{items, changeStatus}}/>
+                    <FilteredList {...{items, changeStatus, deleteItem}}/>
                     <Footer {...{count, filter, changeFilter, mode, changeMode}}/>
                     <Info {...{mode}}/>
                 </div>

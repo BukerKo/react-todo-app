@@ -39,6 +39,10 @@ export function updateStatus(items, itemId, completed) {
     });
 }
 
+export function deleteItem(items, itemId) {
+    return items.filter(item => item.id !== itemId);
+}
+
 /**
  * A counter to generate a unique id for a todo item.
  * Can remove this logic when the todo is created using backend/database logic.
